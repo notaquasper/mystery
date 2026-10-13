@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +10,14 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{--ink:#1a1512;--paper:#d8c9a3;--paper-dark:#a89670;--gold:#c9a961;--blood:#8a2424;--smoke:#3a3530;--bg:#0d0a08}
 html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;background:var(--bg);color:var(--paper);user-select:none;-webkit-user-select:none;touch-action:manipulation;overscroll-behavior:none}
-
 .grain{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.09;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='120' height='120' filter='url(%23n)'/></svg>");animation:grain .5s steps(3) infinite;mix-blend-mode:overlay}
 @keyframes grain{0%{transform:translate(0,0)}33%{transform:translate(-4%,3%)}66%{transform:translate(3%,-4%)}100%{transform:translate(0,0)}}
 .vignette{position:fixed;inset:0;pointer-events:none;z-index:998;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.85) 100%)}
 .rain{position:fixed;inset:-50%;pointer-events:none;z-index:1;opacity:.13;background-image:repeating-linear-gradient(105deg,transparent 0,transparent 2px,rgba(200,200,200,.6) 2px,rgba(200,200,200,.6) 3px,transparent 3px,transparent 7px);background-size:6px 14px;animation:rain .4s linear infinite;mix-blend-mode:screen}
 @keyframes rain{from{transform:translateY(0)}to{transform:translateY(14px)}}
-
 .app{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;max-width:520px;margin:0 auto;background:linear-gradient(180deg,#14100c 0%,#0d0a08 100%);overflow:hidden}
 .screen{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .45s ease}
 .screen.active{opacity:1;pointer-events:auto}
-
-/* ---------- INTRO ---------- */
 #intro{padding:30px 22px;justify-content:center;align-items:center;text-align:center;overflow-y:auto}
 .case-stamp{font-family:'Special Elite',monospace;font-size:12px;letter-spacing:5px;color:var(--blood);border:2px solid var(--blood);padding:5px 12px;margin-bottom:18px;transform:rotate(-3deg);background:rgba(138,36,36,.1)}
 .club-name{font-family:'Special Elite',monospace;font-size:26px;line-height:1.15;letter-spacing:2px;color:var(--paper);text-shadow:2px 2px 0 rgba(0,0,0,.8);margin-bottom:6px}
@@ -29,11 +26,8 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 .typewriter::after{content:'▌';animation:blink .7s step-end infinite;color:var(--gold)}
 .typewriter.done::after{display:none}
 @keyframes blink{50%{opacity:0}}
-
 .btn{font-family:'Special Elite',monospace;font-size:14px;letter-spacing:3px;padding:14px 26px;background:transparent;color:var(--gold);border:2px solid var(--gold);cursor:pointer;transition:all .2s;text-transform:uppercase;touch-action:manipulation}
 .btn:active{background:var(--gold);color:var(--ink);box-shadow:0 0 30px rgba(201,169,97,.6)}
-
-/* ---------- HUB ---------- */
 .hub-header{padding:12px 16px;border-bottom:1px solid rgba(201,169,97,.25);display:flex;justify-content:space-between;align-items:center;background:rgba(20,16,12,.9);flex-shrink:0}
 .hub-header .ct{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:3px;color:var(--gold)}
 .hub-header .prog{font-size:11px;color:var(--paper-dark);letter-spacing:1px}
@@ -50,13 +44,11 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 .suspect-card{display:flex;gap:12px;align-items:center}
 .suspect-avatar{font-size:38px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,169,97,.4);background:rgba(0,0,0,.4);flex-shrink:0}
 .suspect-info{flex:1}
-
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,169,97,.3);background:rgba(20,16,12,.95);flex-shrink:0}
 .tab{font-family:'Special Elite',monospace;font-size:9.5px;letter-spacing:1px;padding:10px 4px;background:transparent;border:none;color:var(--paper-dark);cursor:pointer;text-transform:uppercase;transition:all .2s;position:relative}
 .tab.active{color:var(--gold);background:rgba(201,169,97,.08)}
 .tab.active::after{content:'';position:absolute;top:0;left:20%;right:20%;height:2px;background:var(--gold);box-shadow:0 0 12px var(--gold)}
 .tab .tab-icon{display:block;font-size:15px;margin-bottom:2px;font-family:system-ui,sans-serif}
-
 .detail-screen{background:linear-gradient(180deg,#14100c,#0a0806);z-index:100;padding:0}
 .detail-header{padding:12px 14px;border-bottom:1px solid rgba(201,169,97,.3);display:flex;align-items:center;gap:10px;background:rgba(20,16,12,.95);flex-shrink:0}
 .back-btn{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:2px;padding:8px 12px;background:transparent;border:1px solid rgba(201,169,97,.4);color:var(--gold);cursor:pointer}
@@ -64,7 +56,6 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 .detail-title{font-family:'Special Elite',monospace;font-size:14px;color:var(--paper);letter-spacing:1px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .detail-body{flex:1;overflow-y:auto;padding:16px;-webkit-overflow-scrolling:touch}
 .detail-desc{font-size:13.5px;line-height:1.7;color:var(--paper);font-style:italic;margin-bottom:16px;padding:12px;background:rgba(0,0,0,.3);border-left:3px solid var(--gold)}
-
 .hotspot{display:flex;align-items:center;gap:10px;padding:12px;margin-bottom:7px;background:rgba(40,32,24,.6);border:1px solid rgba(201,169,97,.25);cursor:pointer;transition:all .15s;font-size:13.5px;color:var(--paper);text-align:left;width:100%;font-family:'Courier Prime',monospace}
 .hotspot:active{transform:scale(.98)}
 .hotspot.found{border-color:var(--smoke);color:var(--paper-dark)}
@@ -72,38 +63,30 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 .hotspot .label{flex:1}
 .hotspot .status{font-size:9.5px;letter-spacing:1px;color:var(--gold);flex-shrink:0}
 .hotspot.found .status{color:var(--smoke)}
-
 .found-text{padding:13px;background:rgba(138,36,36,.15);border-left:3px solid var(--blood);font-size:13.5px;line-height:1.7;color:var(--paper);margin:12px 0 16px;animation:reveal .4s ease}
 .found-text.flavor{background:rgba(0,0,0,.3);border-left-color:var(--smoke);color:var(--paper-dark);font-style:italic}
 @keyframes reveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .found-text .tag{font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:2px;color:var(--gold);display:block;margin-bottom:6px}
-
 .suspect-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(201,169,97,.25)}
 .suspect-header .avatar{font-size:52px;width:72px;height:72px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(201,169,97,.5);background:rgba(0,0,0,.5);flex-shrink:0}
 .suspect-header .info h2{font-family:'Special Elite',monospace;font-size:17px;color:var(--paper);letter-spacing:1px;margin-bottom:3px}
 .suspect-header .info .role{font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
 .suspect-header .info .desc{font-size:11.5px;font-style:italic;color:var(--paper-dark);margin-top:5px;line-height:1.5}
-
 .q-btn{display:block;width:100%;text-align:left;padding:11px 13px;margin-bottom:7px;background:rgba(40,32,24,.5);border:1px solid rgba(201,169,97,.25);color:var(--paper);font-family:'Courier Prime',monospace;font-size:13px;line-height:1.4;cursor:pointer;transition:all .15s;border-left:3px solid var(--gold)}
 .q-btn:active{transform:scale(.98)}
 .q-btn.asked{opacity:.55;border-left-color:var(--smoke)}
 .q-btn.new{border-left-color:var(--blood);box-shadow:0 0 12px rgba(138,36,36,.35)}
-
 .response{padding:13px;background:rgba(0,0,0,.4);border-left:3px solid var(--blood);margin-bottom:12px;font-size:13.5px;line-height:1.7;font-style:italic;color:var(--paper);animation:reveal .4s ease}
 .response::before{content:'❝';color:var(--blood);font-size:20px;margin-right:5px;font-family:Georgia,serif}
 .response::after{content:'❞';color:var(--blood);font-size:20px;margin-left:5px;font-family:Georgia,serif}
-
 .evidence-item{padding:11px 13px;margin-bottom:9px;background:rgba(40,32,24,.5);border:1px solid rgba(201,169,97,.3);border-left:3px solid var(--gold)}
 .evidence-item .ev-name{font-family:'Special Elite',monospace;font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:3px}
 .evidence-item .ev-text{font-size:12.5px;color:var(--paper);line-height:1.55}
-
 .empty-state{text-align:center;padding:36px 20px;color:var(--paper-dark);font-style:italic;font-size:13.5px;line-height:1.7}
 .empty-state .big{font-size:40px;margin-bottom:12px;font-family:system-ui,sans-serif;opacity:.5}
-
 .accuse-warning{padding:13px;background:rgba(138,36,36,.2);border:1px solid var(--blood);color:var(--paper);font-size:12.5px;line-height:1.6;margin-bottom:16px;text-align:center;font-family:'Special Elite',monospace;letter-spacing:1px}
 .accuse-btn{display:block;width:100%;padding:16px;margin-bottom:10px;background:rgba(40,32,24,.6);border:2px solid rgba(201,169,97,.4);color:var(--paper);font-family:'Special Elite',monospace;font-size:14px;letter-spacing:2px;cursor:pointer;text-align:center;transition:all .2s}
 .accuse-btn:active{transform:scale(.98);background:rgba(138,36,36,.4);box-shadow:0 0 30px rgba(138,36,36,.5)}
-
 #ending{padding:30px 22px;justify-content:center;align-items:center;text-align:center;background:radial-gradient(ellipse at center,#1a1512 0%,#050302 100%);overflow-y:auto}
 .ending-title{font-family:'Special Elite',monospace;font-size:28px;letter-spacing:4px;margin-bottom:18px}
 .ending-title.win{color:var(--gold);text-shadow:0 0 30px rgba(201,169,97,.6)}
@@ -112,10 +95,8 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 .ending-stats{font-family:'Special Elite',monospace;font-size:12px;letter-spacing:1.5px;color:var(--paper-dark);margin-bottom:24px;padding:12px 18px;border-top:1px solid rgba(201,169,97,.3);border-bottom:1px solid rgba(201,169,97,.3);line-height:1.8}
 .ending-stats span{color:var(--gold)}
 .ending-actions{display:flex;flex-direction:column;gap:10px;width:100%;max-width:280px}
-
 .toast{position:fixed;top:20px;left:50%;transform:translate(-50%,-100px);padding:9px 20px;background:var(--gold);color:var(--ink);font-family:'Special Elite',monospace;font-size:11px;letter-spacing:2px;z-index:9000;transition:transform .4s cubic-bezier(.2,1.2,.4,1);pointer-events:none;box-shadow:0 8px 30px rgba(201,169,97,.6)}
 .toast.show{transform:translate(-50%,0)}
-
 .detail-body::-webkit-scrollbar,.hub-main::-webkit-scrollbar{width:4px}
 .detail-body::-webkit-scrollbar-thumb,.hub-main::-webkit-scrollbar-thumb{background:rgba(201,169,97,.3)}
 #intro::-webkit-scrollbar,#ending::-webkit-scrollbar{width:0}
@@ -125,7 +106,6 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
 <div class="rain"></div>
 <div class="grain"></div>
 <div class="vignette"></div>
-
 <div class="app">
   <section id="intro" class="screen active">
     <div class="case-stamp" id="caseStamp">CASE FILE</div>
@@ -134,7 +114,6 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
     <div class="typewriter" id="introText"></div>
     <button class="btn" id="beginBtn" style="opacity:0;pointer-events:none">BEGIN INVESTIGATION</button>
   </section>
-
   <section id="hub" class="screen">
     <header class="hub-header">
       <div class="ct" id="hubCaseId">CASE</div>
@@ -148,7 +127,6 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
       <button class="tab" data-tab="accuse"><span class="tab-icon">⚖️</span>Accuse</button>
     </nav>
   </section>
-
   <section id="detail" class="screen detail-screen">
     <header class="detail-header">
       <button class="back-btn" id="backBtn">◄ BACK</button>
@@ -156,7 +134,6 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
     </header>
     <div class="detail-body" id="detailBody"></div>
   </section>
-
   <section id="ending" class="screen">
     <h1 class="ending-title" id="endingTitle"></h1>
     <div class="ending-text" id="endingText"></div>
@@ -166,14 +143,15 @@ html,body{height:100%;overflow:hidden;font-family:'Courier Prime',monospace;back
     </div>
   </section>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <script>
 (function(){
 'use strict';
-
 /* ============================================================
+   PART 1 ENDS HERE
+   (Paste continues in Part 2)
+============================================================ */
+ /* ============================================================
    DATA POOLS
 ============================================================ */
 const DATA = {
@@ -231,4 +209,571 @@ const DATA = {
     ],
     jealousy: [
       {name:'Ripped Photograph',icon:'📸',text:'A photo of {VICTIM} with another man, torn in half. Found in {KILLER}\'s coat pocket.',question:'"You tore this photo. Why?"',response:'"She was mine. She was supposed to be mine. You wouldn\'t understand."'},
-      {name:'Threatening Note',icon:'✉️',text:'A note in {KILLER}\'s hand: "If I can\'t have you, no one will." Never sen
+      {name:'Threatening Note',icon:'✉️',text:'A note in {KILLER}\'s hand: "If I can\'t have you, no one will." Never sent — found in their wallet.',question:'"If you can\'t have her, no one will?"',response:'"That was — that was months ago. I was angry. People say things they don\'t mean."'},
+      {name:'Rival\'s Diary',icon:'📔',text:'A diary obsessively cataloging {VICTIM}\'s every success. Every review. Every night she took the stage.',question:'"You kept a diary about her."',response:'"You call it obsession. I call it admiration. There\'s a line."'}
+    ],
+    obsession: [
+      {name:'Love Letter',icon:'💌',text:'A desperate letter from {KILLER}: "You\'re all I have. Don\'t leave me." Ink-smudged — as if someone cried writing it.',question:'"You wrote her this letter."',response:'"Yes. I loved her. That\'s not a crime either."'},
+      {name:'Stalker\'s Photographs',icon:'📷',text:'Dozens of photos of {VICTIM}, all taken secretly. Some from outside her window at night.',question:'"You photographed her window at night."',response:'"I was protecting her. You don\'t understand. There are dangerous people in this city."'},
+      {name:'Spare Key',icon:'🔑',text:'A key to {VICTIM}\'s dressing room. Found in {KILLER}\'s coat pocket. She never gave it to them.',question:'"How did you get this key?"',response:'"I — I made a copy. For emergencies. That\'s all. Nothing happened."'}
+    ],
+    silence: [
+      {name:'Blackmail Note',icon:'📝',text:'A note from {VICTIM}: "I know what you did. Pay up or I talk." Postmarked the day before the murder.',question:'"She was blackmailing you."',response:'"Blackmail is a strong word. She was... negotiating. It was business."'},
+      {name:'Hidden Dossier',icon:'📁',text:'Files {VICTIM} had been compiling on {KILLER}. Enough to destroy a reputation — maybe a life.',question:'"She had files on you. Damning files."',response:'"Everyone has secrets, detective. That doesn\'t make us killers."'},
+      {name:'Torn Contract',icon:'📄',text:'A torn contract in {KILLER}\'s trash. {VICTIM}\'s signature is visible. It looks like blackmail terms.',question:'"You tried to destroy this contract."',response:'"I tore it because it was over. Done. Do you understand? It was over."'}
+    ]
+  },
+  alibis: [
+    {name:'Bartender\'s Statement',icon:'🍸',text:'The bartender confirms {INNOCENT} was on the main floor all night. Dozens of witnesses.',question:'"The bartender says you never left the main floor."',response:'"Of course not. I was drinking. Ask anyone."'},
+    {name:'Cab Receipt',icon:'🧾',text:'A cab receipt places {INNOCENT} across town at the time of the murder. Timestamped 11:52 PM.',question:'"This receipt puts you five miles away at midnight."',response:'"I told you I wasn\'t here. Now you have proof."'},
+    {name:'Witness Testimony',icon:'🃏',text:'A waiter saw {INNOCENT} playing cards in the back room until well past 1 AM. Multiple witnesses.',question:'"A waiter saw you playing cards until 1 AM."',response:'"Like I said. I wasn\'t here. I never came back."'},
+    {name:'Party Photograph',icon:'📷',text:'A party photo — {INNOCENT} at a rival club across town, timestamped an hour before the body was found.',question:'"You\'re in this photo. Across town."',response:'"I told you. I was long gone by the time it happened."'},
+    {name:'Phone Record',icon:'☎️',text:'A phone log shows {INNOCENT} was on a call to Chicago at midnight. Forty-five minutes long.',question:'"You were on the phone to Chicago at midnight."',response:'"My sister. She\'ll confirm every word. Check for yourself."'},
+    {name:'Signed Guestbook',icon:'📖',text:'{INNOCENT}\'s signature in the guestbook of a hotel across town. Dated 11:45 PM.',question:'"Your signature. A hotel across town. 11:45 PM."',response:'"Now will you believe me? I wasn\'t anywhere near this place."'}
+  ],
+  redHerrings: [
+    {name:'Odd Behavior',icon:'👁️',text:'A witness saw someone arguing with {VICTIM} earlier. Voices were muffled. Could have been anyone.'},
+    {name:'Stained Handkerchief',icon:'🧣',text:'A handkerchief with red stains. Lab says wine — not blood. Inconclusive.'},
+    {name:'Anonymous Letter',icon:'✉️',text:'A threatening letter mailed to {VICTIM} three weeks ago. Postmarked from out of state. Untraceable.'},
+    {name:'Broken Heel',icon:'👠',text:'A broken high heel on the stairs. Not {VICTIM}\'s size. No way to know whose.'},
+    {name:'Empty Wallet',icon:'👛',text:'{VICTIM}\'s wallet is empty. But the safe wasn\'t touched — so robbery wasn\'t the motive.'},
+    {name:'Old Photograph',icon:'🖼️',text:'An old photo of {VICTIM} with someone whose face has been scratched out. No names on the back.'},
+    {name:'Unfinished Drink',icon:'🥃',text:'A half-finished drink with lipstick on the rim. Could belong to a dozen women in the club.'},
+    {name:'Mysterious Caller',icon:'☎️',text:'{VICTIM} received a phone call earlier that upset her. The operator didn\'t log the number.'}
+  ],
+  emptyFlavors: [
+    {label:'Dusty Corner',icon:'🕸️',text:'Cobwebs. Dust. Nothing useful.'},
+    {label:'Old Newspaper',icon:'📰',text:'Yesterday\'s paper. Nothing relevant.'},
+    {label:'Stale Drink',icon:'🥃',text:'A half-empty glass. Whoever was here left in a hurry — or hours ago.'},
+    {label:'Broken Chair',icon:'🪑',text:'A chair with a broken leg. Nothing hidden inside.'},
+    {label:'Torn Curtain',icon:'🎭',text:'Just a torn curtain. The fabric is cheap.'},
+    {label:'Empty Bottle',icon:'🍾',text:'An empty champagne bottle. Celebrating something recent.'},
+    {label:'Overflowing Ashtray',icon:'🚬',text:'Someone smoked a lot here recently. Could be anyone.'},
+    {label:'Lost Glove',icon:'🧤',text:'A single glove. Old. No name inside. No match to anyone here.'}
+  ],
+  locationTemplates: [
+    {name:'Crime Scene',sub:'Where the body was found',desc:'Chalk outline. Coppers have already come and gone. The ghost of what happened still hangs in the air.'},
+    {name:'Main Floor',sub:'Bar and stage',desc:'Chairs still pushed back from the last set. The air smells like gin and regret.'},
+    {name:'Back Alley',sub:'Behind the club',desc:'A narrow strip of wet brick. Trash cans. The smell of old rain and older secrets.'},
+    {name:'Private Office',sub:'Where the boss works',desc:'Leather chairs, cigar smoke, a desk the size of a coffin. They let you look. That smile doesn\'t reach their eyes.'}
+  ]
+};
+
+/* ============================================================
+   UTILS
+============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const pick = arr => arr[Math.floor(Math.random()*arr.length)];
+const randInt = (min,max) => Math.floor(Math.random()*(max-min+1))+min;
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fill(str, map){return str.replace(/\{(\w+)\}/g,(m,k)=>map[k]!==undefined?map[k]:m);}
+
+/* ============================================================
+   AUDIO
+============================================================ */
+const Sound = (()=>{
+  let ctx=null;
+  function ensure(){if(!ctx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();}if(ctx.state==='suspended')ctx.resume();return ctx;}
+  function beep(freq,dur,type,vol){const c=ensure();if(!c)return;const o=c.createOscillator(),g=c.createGain(),t=c.currentTime;o.type=type||'sine';o.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||.07,t+.01);g.gain.exponentialRampToValueAtTime(0.0001,t+dur);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+dur+.05);}
+  return{
+    unlock(){ensure();},
+    click(){beep(1800,.04,'square',.035);},
+    found(){beep(880,.12,'sine',.08);setTimeout(()=>beep(1320,.15,'sine',.06),60);},
+    interrogate(){beep(220,.06,'sine',.05);},
+    win(){[523.25,659.25,783.99,1046.5].forEach((f,i)=>setTimeout(()=>beep(f,.3,'triangle',.09),i*140));},
+    lose(){[392,329.63,261.63,174].forEach((f,i)=>setTimeout(()=>beep(f,.5,'sine',.1),i*180));}
+  };
+})();
+
+/* ============================================================
+   CASE GENERATOR
+============================================================ */
+function generateCase(){
+  const caseNum = `#${randInt(1000,9999)}-${randInt(100,999)}`;
+  const club = pick(DATA.clubNames);
+  const victim = {
+    name: `${pick(DATA.firstNames)} ${pick(DATA.lastNames)}`,
+    role: pick(DATA.victimRoles)
+  };
+  const templates = shuffle(DATA.suspectTemplates).slice(0,4);
+  const usedNames = new Set([victim.name]);
+  const suspects = templates.map((t,i)=>{
+    let name;
+    do { name = `${pick(DATA.firstNames)} ${pick(DATA.lastNames)}`; } while(usedNames.has(name));
+    usedNames.add(name);
+    return {
+      id: 'suspect_'+i,
+      name,
+      role: t.role,
+      avatar: t.avatar,
+      motive: t.motive,
+      qWhere: t.qWhere,
+      qRelation: t.qRelation,
+      qMotive: t.qMotive,
+      isKiller: false
+    };
+  });
+  const killerIdx = randInt(0,3);
+  suspects[killerIdx].isKiller = true;
+  const killer = suspects[killerIdx];
+  const innocents = suspects.filter(s=>!s.isKiller);
+  const clues = [];
+  let cid = 0;
+  const damningCount = randInt(2,3);
+  const damningPool = shuffle(DATA.motiveClues[killer.motive]).slice(0,damningCount);
+  damningPool.forEach(t=>{
+    clues.push({
+      id: 'c'+(cid++),
+      name: t.name,
+      icon: t.icon,
+      text: fill(t.text,{KILLER:killer.name,VICTIM:victim.name}),
+      type: 'damning',
+      target: killer.id,
+      question: t.question,
+      response: fill(t.response,{KILLER:killer.name,VICTIM:victim.name})
+    });
+  });
+  const alibiPool = shuffle(DATA.alibis);
+  innocents.forEach((inn,i)=>{
+    const t = alibiPool[i];
+    clues.push({
+      id: 'c'+(cid++),
+      name: t.name,
+      icon: t.icon,
+      text: fill(t.text,{INNOCENT:inn.name,VICTIM:victim.name}),
+      type: 'alibi',
+      target: inn.id,
+      question: t.question,
+      response: fill(t.response,{INNOCENT:inn.name})
+    });
+  });
+  const rhCount = randInt(2,3);
+  const rhPool = shuffle(DATA.redHerrings).slice(0,rhCount);
+  rhPool.forEach(t=>{
+    clues.push({
+      id: 'c'+(cid++),
+      name: t.name,
+      icon: t.icon,
+      text: fill(t.text,{VICTIM:victim.name,KILLER:killer.name}),
+      type: 'herring',
+      target: null
+    });
+  });
+  const spots = clues.map(c=>({ label:c.name, icon:c.icon, clue:c, flavor:null }));
+  while(spots.length < 12){
+    const e = pick(DATA.emptyFlavors);
+    spots.push({ label:e.label, icon:e.icon, clue:null, flavor:e.text });
+  }
+  shuffle(spots);
+  const locations = DATA.locationTemplates.map((loc,i)=>({
+    id: 'loc_'+i,
+    name: loc.name,
+    sub: loc.sub,
+    desc: loc.desc,
+    hotspots: [spots[i*3], spots[i*3+1], spots[i*3+2]]
+  }));
+  return {
+    id: caseNum,
+    club,
+    victim,
+    suspects,
+    locations,
+    killerId: killer.id,
+    totalClues: clues.length,
+    killerClue: damningPool[0]
+  };
+}
+
+/* ============================================================
+   PART 2 ENDS HERE
+============================================================ */
+/* ============================================================
+   STATE
+============================================================ */
+const state = {
+  caseData: null,
+  found: new Set(),
+  asked: new Set(),
+  tab: 'locations',
+  detail: null
+};
+
+/* ============================================================
+   HELPERS
+============================================================ */
+function showScreen(id){
+  $$('.screen').forEach(s=>s.classList.remove('active'));
+  $('#'+id).classList.add('active');
+}
+
+let toastTimer;
+function toast(msg){
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'),1600);
+}
+
+/* ============================================================
+   INTRO
+============================================================ */
+let typeIdx=0, lineIdx=0, typeDone=false, introLines=[];
+
+function startIntro(){
+  const c = state.caseData;
+  $('#caseStamp').textContent = `CASE FILE ${c.id}`;
+  $('#clubName').textContent = c.club.toUpperCase();
+  $('#victimLine').textContent = `${c.victim.name.toUpperCase()} · ${c.victim.role.toUpperCase()}`;
+
+  introLines = [
+    `Rain hammers the pavement outside ${c.club}.`,
+    `Inside, the music is dead. So is the ${c.victim.role}.`,
+    `${c.victim.name} — found in the ${c.locations[0].name.toLowerCase()} at midnight.`,
+    `Foul play. No forced entry.`,
+    ``,
+    `Four suspects. ${c.totalClues} clues. One killer.`,
+    `The cops want it solved by dawn.`
+  ];
+
+  const el = $('#introText');
+  el.textContent = '';
+  el.classList.remove('done');
+  typeIdx=0; lineIdx=0; typeDone=false;
+
+  const btn = $('#beginBtn');
+  btn.style.opacity='0'; btn.style.pointerEvents='none';
+
+  setTimeout(stepType, 400);
+}
+
+function stepType(){
+  const el = $('#introText');
+  if(lineIdx >= introLines.length){
+    typeDone = true;
+    el.classList.add('done');
+    const btn = $('#beginBtn');
+    btn.style.opacity='1'; btn.style.pointerEvents='auto';
+    return;
+  }
+  const line = introLines[lineIdx];
+  if(line === ''){ el.textContent += '\n\n'; lineIdx++; typeIdx=0; setTimeout(stepType, 250); return; }
+  if(typeIdx < line.length){
+    el.textContent += line[typeIdx++];
+    if(Math.random()<.25) Sound.click();
+    setTimeout(stepType, 26);
+  } else {
+    el.textContent += '\n';
+    lineIdx++; typeIdx=0;
+    setTimeout(stepType, 320);
+  }
+}
+
+$('#introText').addEventListener('click', ()=>{
+  if(typeDone) return;
+  $('#introText').textContent = introLines.join('\n');
+  typeDone = true;
+  $('#introText').classList.add('done');
+  const btn = $('#beginBtn');
+  btn.style.opacity='1'; btn.style.pointerEvents='auto';
+});
+
+/* ============================================================
+   HUB
+============================================================ */
+function updateEvCount(){
+  $('#evCount').textContent = state.found.size;
+  $('#evTotal').textContent = state.caseData.totalClues;
+}
+
+function renderHub(){
+  const c = state.caseData;
+  const main = $('#hubMain');
+  main.innerHTML = '';
+  $('#hubCaseId').textContent = 'CASE ' + c.id;
+
+  if(state.tab === 'locations'){
+    main.innerHTML = '<div class="section-intro">▸ SEARCH THE SCENE</div>';
+    c.locations.forEach(loc=>{
+      const total = loc.hotspots.filter(h=>h.clue).length;
+      const found = loc.hotspots.filter(h=>h.clue && state.found.has(h.clue.id)).length;
+      const done = total > 0 && found === total;
+      const card = document.createElement('div');
+      card.className = 'card' + (done?' done':'');
+      card.innerHTML = `
+        <div class="name">${loc.name}</div>
+        <div class="sub">${loc.sub}</div>
+        <div class="count">${found}/${total} CLUES</div>`;
+      card.addEventListener('click', ()=>{ Sound.click(); openLocation(loc.id); });
+      main.appendChild(card);
+    });
+  }
+  else if(state.tab === 'suspects'){
+    main.innerHTML = '<div class="section-intro">▸ QUESTION THE SUSPECTS</div>';
+    c.suspects.forEach(s=>{
+      const extra = state.found.size > 0 ? c.locations.reduce((n,loc)=>n+loc.hotspots.filter(h=>h.clue && state.found.has(h.clue.id) && h.clue.target===s.id).length,0) : 0;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="suspect-card">
+          <div class="suspect-avatar">${s.avatar}</div>
+          <div class="suspect-info">
+            <div class="name">${s.name}</div>
+            <div class="sub">${s.role}</div>
+          </div>
+          ${extra>0?`<div class="count" style="color:var(--blood)">● ${extra}</div>`:''}
+        </div>`;
+      card.addEventListener('click', ()=>{ Sound.click(); openSuspect(s.id); });
+      main.appendChild(card);
+    });
+  }
+  else if(state.tab === 'evidence'){
+    main.innerHTML = '<div class="section-intro">▸ CASE EVIDENCE</div>';
+    const foundClues = [];
+    c.locations.forEach(loc=>loc.hotspots.forEach(h=>{
+      if(h.clue && state.found.has(h.clue.id)) foundClues.push(h.clue);
+    }));
+    if(foundClues.length === 0){
+      main.innerHTML += `<div class="empty-state"><div class="big">📁</div>No evidence collected yet.<br>Search the locations to find clues.</div>`;
+    } else {
+      foundClues.forEach(cl=>{
+        const item = document.createElement('div');
+        item.className = 'evidence-item';
+        const tag = cl.type==='damning'?'⚠ POINTS TO '+c.suspects.find(s=>s.id===cl.target).name.toUpperCase()
+                  : cl.type==='alibi'?'✓ CLEARS '+c.suspects.find(s=>s.id===cl.target).name.toUpperCase()
+                  : '· INCONCLUSIVE';
+        item.innerHTML = `<div class="ev-name">▸ ${cl.name} <span style="font-size:9px;color:var(--paper-dark);letter-spacing:1px;float:right">${tag}</span></div><div class="ev-text">${cl.text}</div>`;
+        main.appendChild(item);
+      });
+    }
+  }
+  else if(state.tab === 'accuse'){
+    main.innerHTML = '<div class="section-intro">▸ MAKE YOUR ACCUSATION</div>';
+    const minClues = 5;
+    if(state.found.size < minClues){
+      main.innerHTML += `<div class="accuse-warning">⚠ NOT ENOUGH EVIDENCE<br><span style="font-size:11px;letter-spacing:1px;opacity:.8">You need at least ${minClues} clues before accusing.<br>You currently have ${state.found.size}.</span></div>`;
+    } else {
+      main.innerHTML += `<div class="accuse-warning" style="background:rgba(201,169,97,.15);border-color:var(--gold)">⚖ CHOOSE CAREFULLY<br><span style="font-size:11px;letter-spacing:1px;opacity:.85">There's no going back. Name the killer.</span></div>`;
+      c.suspects.forEach(s=>{
+        const btn = document.createElement('button');
+        btn.className = 'accuse-btn';
+        btn.textContent = `⚖ ACCUSE ${s.name.toUpperCase()}`;
+        btn.addEventListener('click', ()=>{ Sound.click(); accuse(s.id); });
+        main.appendChild(btn);
+      });
+    }
+  }
+}
+
+/* ============================================================
+   LOCATION DETAIL
+============================================================ */
+function openLocation(id){
+  const loc = state.caseData.locations.find(l=>l.id===id);
+  $('#detailTitle').textContent = loc.name;
+  const body = $('#detailBody');
+  body.innerHTML = `<div class="detail-desc">${loc.desc}</div>`;
+
+  loc.hotspots.forEach(h=>{
+    const isFound = h.clue && state.found.has(h.clue.id);
+    const btn = document.createElement('button');
+    btn.className = 'hotspot' + (isFound?' found':'');
+    btn.innerHTML = `
+      <span class="icon">${h.icon}</span>
+      <span class="label">${h.label}</span>
+      <span class="status">${isFound ? '✓' : h.clue ? 'SEARCH' : '·'}</span>`;
+    btn.addEventListener('click', ()=>handleHotspot(h, btn));
+    body.appendChild(btn);
+  });
+
+  showScreen('detail');
+  $('#detail').scrollTop = 0;
+}
+
+function handleHotspot(h, btn){
+  Sound.interrogate();
+  const body = $('#detailBody');
+  const prev = body.querySelector('.found-text');
+  if(prev) prev.remove();
+
+  const div = document.createElement('div');
+
+  if(h.clue && !state.found.has(h.clue.id)){
+    state.found.add(h.clue.id);
+    Sound.found();
+    updateEvCount();
+    toast('EVIDENCE ADDED');
+    div.className = 'found-text';
+    div.innerHTML = `<span class="tag">▸ NEW EVIDENCE: ${h.clue.name.toUpperCase()}</span>${h.clue.text}`;
+    btn.classList.add('found');
+    btn.querySelector('.status').textContent = '✓';
+  } else if(h.clue){
+    div.className = 'found-text';
+    div.innerHTML = `<span class="tag">▸ ${h.clue.name.toUpperCase()}</span>${h.clue.text}`;
+  } else {
+    div.className = 'found-text flavor';
+    div.innerHTML = `<span class="tag">▸ NOTHING</span>${h.flavor}`;
+  }
+
+  const desc = body.querySelector('.detail-desc');
+  desc.insertAdjacentElement('afterend', div);
+  body.scrollTop = 0;
+}
+
+/* ============================================================
+   SUSPECT INTERROGATION
+============================================================ */
+function getSuspectClueQuestions(suspectId){
+  const result = [];
+  state.caseData.locations.forEach(loc=>loc.hotspots.forEach(h=>{
+    if(h.clue && state.found.has(h.clue.id) && h.clue.target === suspectId && h.clue.question){
+      result.push({
+        id: 'clue_'+h.clue.id,
+        label: h.clue.question,
+        response: h.clue.response,
+        fromClue: true
+      });
+    }
+  }));
+  return result;
+}
+
+function openSuspect(id){
+  const s = state.caseData.suspects.find(x=>x.id===id);
+  $('#detailTitle').textContent = s.name;
+  const body = $('#detailBody');
+
+  const generic = [
+    {id:'where', label:'"Where were you when it happened?"', response:s.qWhere},
+    {id:'relation', label:`"How did you know ${state.caseData.victim.name}?"`, response:s.qRelation},
+    {id:'motive', label:'"Any reason you\'d want them dead?"', response:s.qMotive}
+  ];
+
+  const clueQs = getSuspectClueQuestions(id);
+
+  body.innerHTML = `
+    <div class="suspect-header">
+      <div class="avatar">${s.avatar}</div>
+      <div class="info">
+        <h2>${s.name}</h2>
+        <div class="role">${s.role}</div>
+        <div class="desc">${s.isKiller ? '' : 'Suspect · Undetermined'}</div>
+      </div>
+    </div>
+    <div id="qList"></div>`;
+
+  const qList = body.querySelector('#qList');
+
+  generic.forEach(q=>{
+    const key = id+':g:'+q.id;
+    const asked = state.asked.has(key);
+    const btn = document.createElement('button');
+    btn.className = 'q-btn' + (asked?' asked':'');
+    btn.textContent = q.label;
+    btn.addEventListener('click', ()=>askQuestion(key, q, btn));
+    qList.appendChild(btn);
+  });
+
+  clueQs.forEach(q=>{
+    const key = id+':c:'+q.id;
+    const asked = state.asked.has(key);
+    const btn = document.createElement('button');
+    btn.className = 'q-btn' + (asked?' asked':' new');
+    btn.textContent = q.label;
+    btn.addEventListener('click', ()=>askQuestion(key, q, btn));
+    qList.appendChild(btn);
+  });
+
+  showScreen('detail');
+}
+
+function askQuestion(key, q, btn){
+  Sound.interrogate();
+  state.asked.add(key);
+  btn.classList.remove('new');
+  btn.classList.add('asked');
+
+  const body = $('#detailBody');
+  const prev = body.querySelector('.response');
+  if(prev) prev.remove();
+
+  const div = document.createElement('div');
+  div.className = 'response';
+  div.textContent = q.response;
+  btn.insertAdjacentElement('afterend', div);
+  div.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+/* ============================================================
+   ENDING
+============================================================ */
+function accuse(suspectId){
+  const c = state.caseData;
+  const correct = suspectId === c.killerId;
+  const accused = c.suspects.find(s=>s.id===suspectId);
+  const killer = c.suspects.find(s=>s.id===c.killerId);
+
+  const titleEl = $('#endingTitle');
+  const textEl = $('#endingText');
+  const statsEl = $('#endingStats');
+
+  if(correct){
+    titleEl.textContent = 'CASE CLOSED';
+    titleEl.className = 'ending-title win';
+    textEl.textContent = `You got them.\n\n${killer.name} — ${killer.role.toLowerCase()} — broke under questioning the moment the evidence hit the table. The motive was ${killer.motive}. The killer walks out in cuffs before dawn.\n\nThe rain never stopped. It never does in this town.`;
+    statsEl.innerHTML = `CASE · <span>${c.id}</span><br>EVIDENCE · <span>${state.found.size} / ${c.totalClues}</span><br>KILLER · <span>${killer.name.toUpperCase()}</span>`;
+    Sound.win();
+  } else {
+    titleEl.textContent = 'WRONG SUSPECT';
+    titleEl.className = 'ending-title lose';
+    textEl.textContent = `You named ${accused.name}.\n\nThe DA laughed in your face. While you were wasting time, ${killer.name} skipped town with a suitcase and a smile. The club reopens in a week with a new act.\n\nSomebody got away with murder. And it's on you.`;
+    statsEl.innerHTML = `CASE · <span>${c.id}</span><br>EVIDENCE · <span>${state.found.size} / ${c.totalClues}</span><br>YOU ACCUSED · <span>${accused.name.toUpperCase()}</span><br>KILLER WAS · <span>${killer.name.toUpperCase()}</span>`;
+    Sound.lose();
+  }
+
+  showScreen('ending');
+}
+
+/* ============================================================
+   NEW CASE
+============================================================ */
+function newCase(){
+  state.caseData = generateCase();
+  state.found.clear();
+  state.asked.clear();
+  state.tab = 'locations';
+  state.detail = null;
+
+  $$('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab==='locations'));
+  updateEvCount();
+  showScreen('intro');
+  startIntro();
+}
+
+/* ============================================================
+   EVENTS
+============================================================ */
+$('#beginBtn').addEventListener('click', ()=>{ Sound.unlock(); Sound.click(); showScreen('hub'); renderHub(); });
+$('#backBtn').addEventListener('click', ()=>{ Sound.click(); showScreen('hub'); renderHub(); });
+$('#newCaseBtn').addEventListener('click', ()=>{ Sound.click(); newCase(); });
+
+$$('.tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    Sound.click();
+    state.tab = tab.dataset.tab;
+    $$('.tab').forEach(t=>t.classList.toggle('active', t===tab));
+    renderHub();
+  });
+});
+
+/* ============================================================
+   BOOT
+============================================================ */
+newCase();
+
+})();
+</script>
+</body>
+</html>  
+ 
